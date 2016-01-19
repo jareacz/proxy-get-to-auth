@@ -10,6 +10,8 @@ ENV PROTO http
 ENV UPSTREAM_ADDRESS reports
 ENV UPSTREAM_PORT 5601
 
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+
 ADD proxy.conf /etc/nginx/conf.d/
 ADD run.sh /
 
